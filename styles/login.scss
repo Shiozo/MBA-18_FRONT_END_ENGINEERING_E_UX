@@ -1,0 +1,138 @@
+@import './config.scss';
+
+.container-login {
+	.logo {
+		width: 178.35px;
+		display: block;
+		margin: auto;
+		margin-bottom: 30px;
+	}
+
+	p {
+		text-align: center;
+		color: $errorColor;
+		font-weight: bold;
+		max-width: 300px;
+	}
+
+	.input {
+		display: flex;
+		flex-direction: row;
+		padding: 10px;
+
+		img {
+			width: 20px;
+			margin-right: 10px;
+			margin-top: -10px;
+		}
+
+		input {
+			width: 224px;
+			font-size: 14px;
+			letter-spacing: 0.01em;
+			color: $primaryColor;
+			border-radius: 0px;
+			border-top-width: 0px;
+			border-left-width: 0px;
+			border-right-width: 0px;
+			border-bottom-width: 0.1em;
+			border-color: $mediumGreyColor;
+			padding-bottom: 8px;
+			padding-right: 40px;
+
+			outline: none;
+
+			&:focus {
+				border-color: $primaryColor;
+			}
+
+			&::placeholder {
+				color: $mediumGreyColor;
+				opacity: 1;
+			}
+
+			&:-ms-input-placeholder {
+				color: $mediumGreyColor;
+			}
+
+			&::-ms-input-placeholder {
+				color: $mediumGreyColor;
+			}
+		}
+
+		.eye {
+			width: 20px;
+			margin-left: -30px;
+			margin-top: -3px;
+			cursor: pointer;
+		}
+
+	}
+
+	a {
+		width: 100%;
+		text-align: center;
+		display: block;
+		margin-top: 20px;
+		cursor: pointer;
+		color: $primaryColor !important;
+	}
+
+	button {
+		width: 100%;
+		height: 56px;
+		background-color: $primaryColor;
+		border: none;
+		color: white;
+		border-radius: 12px;
+		font-size: 16px;
+		margin-top: 30px;
+	}
+
+	.invisible {
+		display: none !important;
+	}
+	
+	.disabled {
+		background-color: $mediumGreyColor;
+	}
+
+	@media screen and (min-width:1024px) {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+		
+		.logo{
+			width:520px;
+			margin: 0px;
+		}
+
+		p {
+			max-width: none;
+		}
+
+		form {
+			border-style: solid;
+			border-color: $primaryColor;
+			border-width: 0.1em;
+			border-radius: 32px;
+			padding: 80px 40px;
+			
+			.input{
+				img{
+					width: 20px;
+				}
+
+				input{
+					width: 343px;
+				}
+
+				.eye {
+					margin-top: 5px;
+				}
+			}
+		}
+	}
+}
